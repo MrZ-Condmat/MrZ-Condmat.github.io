@@ -2,14 +2,18 @@
   position: relative;
   left: 50%;
   width: 100vw;
+  height: calc(100vh - var(--home-header-height));
+  height: calc(100dvh - var(--home-header-height));
   margin: 0 0 0 -50vw;
   overflow: hidden;
 }
 
-.home-hero__image {
+.home-hero > .home-hero__image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .home-hero__typewriter {
@@ -18,6 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
   padding: 1.5rem;
   color: #fff;
   font-size: clamp(1.15rem, 4vw, 3rem);
@@ -49,17 +54,6 @@
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .typewriter-cursor {
-    animation: none;
-  }
-}
-
-.home-links {
-  width: min(calc(100% - 2rem), 72rem);
-  margin: 1.5rem auto;
-}
-
 .md-header__button.md-logo,
 .md-header__title {
   display: none;
@@ -67,23 +61,36 @@
 
 body.home-page,
 body:has(.home-hero) {
-  overflow-x: clip;
+  --home-header-height: 4.8rem;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+body.home-page .md-main,
+body:has(.home-hero) .md-main {
+  height: calc(100vh - var(--home-header-height));
+  height: calc(100dvh - var(--home-header-height));
+  min-height: 0;
 }
 
 body.home-page .md-main__inner,
 body:has(.home-hero) .md-main__inner {
+  height: 100%;
   margin-top: 0;
 }
 
 body.home-page .md-content,
 body:has(.home-hero) .md-content {
+  height: 100%;
   max-width: none;
 }
 
 body.home-page .md-content__inner,
 body:has(.home-hero) .md-content__inner {
+  height: 100%;
   margin: 0;
-  padding-top: 0;
+  padding: 0;
 }
 
 body.home-page .md-content__inner::before,
@@ -94,6 +101,18 @@ body:has(.home-hero) .md-content__inner::before {
 body.home-page .md-content__inner > h1:first-child,
 body:has(.home-hero) .md-content__inner > h1:first-child {
   display: none;
+}
+
+body.home-page .md-footer,
+body:has(.home-hero) .md-footer {
+  display: none;
+}
+
+@media screen and (max-width: 76.234375em) {
+  body.home-page,
+  body:has(.home-hero) {
+    --home-header-height: 2.4rem;
+  }
 }
 
 .md-grid {

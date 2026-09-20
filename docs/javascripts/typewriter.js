@@ -21,11 +21,6 @@
 
     typewriter.setAttribute("aria-label", phrase);
 
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      output.textContent = characters.join("");
-      return;
-    }
-
     let characterCount = 0;
     let isDeleting = false;
 

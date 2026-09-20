@@ -10,5 +10,3 @@ hide:
     <span class="typewriter-text" aria-hidden="true"></span><span class="typewriter-cursor" aria-hidden="true">|</span>
   </div>
 </div>
-
-<p class="home-links"><a href="https://github.com/MrZ-Condmat">GitHub</a></p>

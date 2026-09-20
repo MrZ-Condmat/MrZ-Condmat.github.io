@@ -1,8 +1,99 @@
-.home-image {
+.home-hero {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin: 0 0 0 -50vw;
+  overflow: hidden;
+}
+
+.home-hero__image {
   display: block;
-  width: min(100%, 48rem);
+  width: 100%;
   height: auto;
-  margin: 2rem auto;
+}
+
+.home-hero__typewriter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: #fff;
+  font-size: clamp(1.15rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 75%);
+  pointer-events: none;
+}
+
+.typewriter-text {
+  white-space: nowrap;
+}
+
+.typewriter-cursor {
+  margin-left: 0.08em;
+  animation: typewriter-cursor-blink 0.8s step-end infinite;
+}
+
+@keyframes typewriter-cursor-blink {
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typewriter-cursor {
+    animation: none;
+  }
+}
+
+.home-links {
+  width: min(calc(100% - 2rem), 72rem);
+  margin: 1.5rem auto;
+}
+
+.md-header__button.md-logo,
+.md-header__title {
+  display: none;
+}
+
+body.home-page,
+body:has(.home-hero) {
+  overflow-x: clip;
+}
+
+body.home-page .md-main__inner,
+body:has(.home-hero) .md-main__inner {
+  margin-top: 0;
+}
+
+body.home-page .md-content,
+body:has(.home-hero) .md-content {
+  max-width: none;
+}
+
+body.home-page .md-content__inner,
+body:has(.home-hero) .md-content__inner {
+  margin: 0;
+  padding-top: 0;
+}
+
+body.home-page .md-content__inner::before,
+body:has(.home-hero) .md-content__inner::before {
+  display: none;
+}
+
+body.home-page .md-content__inner > h1:first-child,
+body:has(.home-hero) .md-content__inner > h1:first-child {
+  display: none;
 }
 
 .md-grid {

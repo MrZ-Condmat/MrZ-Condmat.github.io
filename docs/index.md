@@ -1,5 +1,14 @@
-# wolf
+---
+hide:
+  - navigation
+  - toc
+---
 
-![Home](assets/home.jpg){ .home-image }
+<div class="home-hero" data-typewriter-text="Eat, drink and sleep well">
+  <img class="home-hero__image" src="assets/home.jpg" alt="Home">
+  <div class="home-hero__typewriter">
+    <span class="typewriter-text" aria-hidden="true"></span><span class="typewriter-cursor" aria-hidden="true">|</span>
+  </div>
+</div>
 
-[GitHub](https://github.com/MrZ-Condmat)
+<p class="home-links"><a href="https://github.com/MrZ-Condmat">GitHub</a></p>

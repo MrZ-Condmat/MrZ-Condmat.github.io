@@ -1,0 +1,10 @@
+.home-image {
+  display: block;
+  width: min(100%, 48rem);
+  height: auto;
+  margin: 2rem auto;
+}
+
+.md-grid {
+  max-width: 72rem;
+}

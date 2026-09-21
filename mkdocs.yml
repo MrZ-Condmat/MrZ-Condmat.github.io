@@ -43,3 +43,4 @@ extra_css:
 
 extra_javascript:
   - javascripts/typewriter.js
+  - javascripts/header-ripple.js

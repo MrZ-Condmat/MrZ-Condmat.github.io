@@ -59,6 +59,50 @@
   display: none;
 }
 
+.md-header {
+  background-color: #050812;
+  background-image:
+    linear-gradient(to bottom, rgb(5 8 18 / 0%) 55%, rgb(5 8 18 / 45%) 100%),
+    linear-gradient(rgb(5 8 18 / 76%), rgb(5 8 18 / 76%)),
+    url("../assets/header-stars.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.md-tabs {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.md-header::after {
+  position: absolute;
+  right: 0;
+  bottom: -1.2rem;
+  left: 0;
+  z-index: 0;
+  height: 1.2rem;
+  background: linear-gradient(to bottom, rgb(5 8 18 / 72%), rgb(5 8 18 / 0%));
+  content: "";
+  pointer-events: none;
+}
+
+.header-ripple-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 100vw;
+  pointer-events: none;
+}
+
+body.header-ripple-active .md-header {
+  background-color: transparent;
+  background-image: none;
+}
+
 @media screen and (min-width: 76.25em) {
   .md-header__inner.md-grid {
     width: 100%;

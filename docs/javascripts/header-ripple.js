@@ -4,7 +4,7 @@
   const MAX_DEVICE_PIXEL_RATIO = 2;
   const RIPPLE_STRENGTH = 0.015;
   const RIPPLE_RADIUS = 0.14;
-  const RIPPLE_DECAY = 2.4;
+  const RIPPLE_DECAY = 1.45;
   const DESKTOP_MEDIA = "(min-width: 76.25em) and (pointer: fine)";
   const scriptUrl = document.currentScript?.src;
 

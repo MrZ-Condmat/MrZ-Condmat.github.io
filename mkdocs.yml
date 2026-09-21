@@ -1,4 +1,4 @@
-site_name: wolf
+site_name: Mengran Zhao
 site_url: https://MrZ-Condmat.github.io/
 repo_url: https://github.com/MrZ-Condmat
 repo_name: MrZ-Condmat
@@ -9,6 +9,7 @@ nav:
 
 theme:
   name: material
+  favicon: assets/avatar-favicon.png
   language: en
   features:
     - navigation.tabs
